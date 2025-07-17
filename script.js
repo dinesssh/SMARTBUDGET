@@ -21,6 +21,14 @@ function filterTransactions() {
     rows[i].style.display = match ? "" : "none";
   }
 }
+function navigateTo(page) {
+  if (page === 'login') {
+    window.location.href = 'login.html';
+  } else if (page === 'signup') {
+    window.location.href = 'signup.html';
+  }
+}
+
 
 function saveSettings() {
   alert("Settings saved!");
