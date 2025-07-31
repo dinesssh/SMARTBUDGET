@@ -12,6 +12,32 @@ body {
   min-height: 100vh;
 }
 
+/* === PAGE BACKGROUND CLASSES === */
+.home-page {
+  background: url('/assets/home-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.login-page {
+  background: url('/assets/login-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.signup-page {
+  background: url('/assets/signup-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.reports-page {
+  background: url('/assets/reports-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.transactions-page {
+  background: url('/assets/transactions-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
 /* === HEADER === */
 header {
   background: #000;
@@ -51,7 +77,7 @@ nav a:hover {
 /* === HERO SECTION === */
 .hero {
   padding: 60px 20px;
-  background: #000;
+  background: rgba(0, 0, 0, 0.85);
   color: #fff;
   text-align: center;
   border-bottom: 4px solid #222;
@@ -123,12 +149,12 @@ h2 {
 }
 
 .positive {
-  color: #000;
+  color: green;
   font-weight: bold;
 }
 
 .negative {
-  color: #444;
+  color: red;
   font-weight: bold;
 }
 
@@ -192,9 +218,9 @@ button:hover {
 
 form {
   background: #fff;
-  padding: 20px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 50px;
+  border-radius: 40px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.1);
   color: #000;
 }
 
@@ -214,13 +240,12 @@ input#searchInput {
   background: #fff;
 }
 
-/* === LOGIN PAGE === */
+/* === LOGIN === */
 .login-section {
   display: flex;
   justify-content: center;
   align-items: center;
   height: calc(100vh - 80px);
-  background: #fff;
   padding: 40px 20px;
 }
 
@@ -283,42 +308,41 @@ input#searchInput {
   color: #555;
 }
 
-/* === SIGNUP PAGE === */
+/* === SIGNUP UPDATED === */
 .signup-page {
-  background: linear-gradient(135deg, #4caf50, #81c784);
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #333;
+  min-height: 100vh;
+  padding: 2rem;
 }
 
 .signup-container {
-  background: white;
+  background: rgba(255, 255, 255, 0.95);
   padding: 2.5rem 3rem;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  max-width: 420px;
   width: 90%;
   text-align: center;
+  border: 2px solid #000;
 }
 
 .signup-container h2 {
   margin-bottom: 1.5rem;
-  color: #0c0d0c;
+  color: #111;
 }
 
 .signup-form {
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
+  gap: 1rem;
   text-align: left;
 }
 
 .signup-form label {
   font-weight: 600;
-  margin-bottom: 0.3rem;
-  display: block;
+  margin-bottom: 0.2rem;
 }
 
 .signup-form input {
@@ -330,15 +354,15 @@ input#searchInput {
 }
 
 .signup-form input:focus {
-  border-color: #111211;
+  border-color: #111;
   outline: none;
-  box-shadow: 0 0 5px #0d0e0daa;
+  box-shadow: 0 0 5px #222;
 }
 
 .signup-form button {
   margin-top: 1rem;
   padding: 0.85rem 0;
-  background-color: #0f100f;
+  background-color: #000;
   border: none;
   border-radius: 8px;
   color: white;
@@ -349,7 +373,7 @@ input#searchInput {
 }
 
 .signup-form button:hover {
-  background-color: #070707;
+  background-color: #333;
 }
 
 .login-text {
@@ -359,12 +383,8 @@ input#searchInput {
 }
 
 .login-text a {
-  color: #101110;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.login-text a:hover {
+  color: #000;
+  font-weight: bold;
   text-decoration: underline;
 }
 
@@ -395,12 +415,159 @@ input#searchInput {
     padding: 20px;
   }
 
-  .login-form input,
-  .login-form button {
-    font-size: 1em;
-  }
-
   .signup-container {
     padding: 2rem 1.5rem;
   }
+}
+
+/* === REPORTS & TRANSACTIONS (unchanged from previous) === */
+/* Use your last style for reports-section and transactions-section */
+.transactions-section {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  background-color: #fdfdfd;
+}
+
+.transactions-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.transaction-filters {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.transaction-filters label {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.transaction-filters select {
+  padding: 0.4rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.transactions-table th,
+.transactions-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.transactions-table th {
+  background-color: #f3f3f3;
+}
+
+.transactions-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.positive {
+  color: green;
+  font-weight: bold;
+}
+
+.negative {
+  color: red;
+  font-weight: bold;
+}
+
+.no-data {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  padding: 1rem 0;
+}
+
+.transactions-summary {
+  text-align: right;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+.reports-section {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  background: #f9f9f9;
+}
+
+.reports-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.reports-section p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.report-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.report-options label {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.report-options select {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.report-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+
+.report-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.report-card:hover {
+  transform: translateY(-5px);
+}
+
+.report-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.report-amount {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #2b7a78;
+  margin-bottom: 0.3rem;
+}
+
+.report-date {
+  font-size: 0.9rem;
+  color: #999;
 }
