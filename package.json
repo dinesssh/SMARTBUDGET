@@ -1,0 +1,10 @@
+{
+  "name": "smartbudget-root",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start": "cd my-backend && npm run start:full"
+  }
+}
+
+
